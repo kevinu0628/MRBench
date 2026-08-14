@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MRBench is a comprehensive benchmark for human motion-text retrieval with heterogeneous motions and multi-granular descriptions."
+    />
+    <meta name="theme-color" content="#101713" />
+    <title>MRBench — Human Motion-Text Retrieval</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MRBench home">
+        <img class="brand-logo" src="assets/logo.png" alt="" />
+        <span>MRBench</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#method">Method</a>
+        <a href="#video">Video</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> Human motion-language alignment</div>
+          <h1>
+            <span class="title-line"><span class="title-accent">MRBench:</span> A Comprehensive Benchmark</span>
+            <span class="title-line">for Human Motion-Text Retrieval</span>
+          </h1>
+          <p class="hero-lead">
+            A diverse, balanced, and multi-granular testbed for measuring robust
+            motion-language alignment beyond narrow datasets and fixed caption styles.
+          </p>
+
+          <div class="authors" aria-label="Authors">
+            <a href="#" data-placeholder-link>Fulong Liu<sup>1,*</sup></a>
+            <a href="https://liangxuy.github.io/" target="_blank" rel="noopener">Liang Xu<sup>2,*,‡</sup></a>
+            <a href="#" data-placeholder-link>Chengqun Yang<sup>1</sup></a>
+            <a href="https://dazazh.github.io/" target="_blank" rel="noopener">Yuhao Zhang<sup>1</sup></a>
+            <a href="https://daodaofr.github.io/" target="_blank" rel="noopener">Yichao Yan<sup>1,†</sup></a>
+            <a href="#" data-placeholder-link>Xiaokang Yang<sup>1</sup></a>
+          </div>
+          <p class="affiliations">
+            <span><sup>1</sup> Shanghai Jiao Tong University</span>
+            <span><sup>2</sup> Beijing Zhongguancun Academy</span>
+            <span><sup>*</sup> Equal contribution</span>
+            <span><sup>‡</sup> Project leader</span>
+            <span><sup>†</sup> Corresponding author</span>
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://arxiv.org/abs/2608.07993" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 3v5h5M9 13h8M9 17h6"/></svg>
+              Paper
+            </a>
+            <button class="button button-secondary" type="button" disabled title="Coming soon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.7-.5-2.4 3.3-.4 6.8-1.6 6.8-7.4a5.7 5.7 0 0 0-1.5-4A5.3 5.3 0 0 0 19.6.4S18.4 0 15 1.9a13.4 13.4 0 0 0-6 0C5.6 0 4.4.4 4.4.4a5.3 5.3 0 0 0-.2 3.9 5.7 5.7 0 0 0-1.5 4c0 5.8 3.5 7 6.8 7.4-.5.5-.6 1.1-.5 2.4V22"/></svg>
+              Code <span class="soon">Soon</span>
+            </button>
+            <button class="button button-secondary" type="button" disabled title="Coming soon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg>
+              Dataset <span class="soon">Soon</span>
+            </button>
+            <a class="button button-ghost" href="#video">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>
+              Video
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stats" aria-label="Benchmark summary">
+          <div><strong>3,390</strong><span>Motion sequences</span></div>
+          <div><strong>10,170</strong><span>Verified captions</span></div>
+          <div><strong>118</strong><span>Fine-grained categories</span></div>
+          <div>
+            <strong class="granularity-value">Concise · Standard · Fine-grained</strong>
+            <span>Text granularities</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-figure reveal" id="overview">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Overview</span>
+            <h2>One benchmark, many ways to move.</h2>
+          </div>
+          <p>
+            MRBench brings together motion capture, in-the-wild videos, synthetic videos,
+            and generated motions—each paired with concise, standard, and fine-grained text.
+          </p>
+        </div>
+        <figure class="paper-figure featured-figure">
+          <a href="assets/teaser_v6.pdf" target="_blank" rel="noopener" aria-label="Open overview figure as PDF">
+            <img src="assets/teaser.webp?v=2" alt="Overview of MRBench motion sources, categories, and text granularities" />
+          </a>
+          <figcaption>
+            MRBench expands both the motion domain and the linguistic query space.
+            <a href="assets/teaser_v6.pdf" target="_blank" rel="noopener">View full-resolution PDF ↗</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section challenge-section reveal" id="benchmark">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Why MRBench?</span>
+            <h2>Existing benchmarks hide critical failure modes.</h2>
+          </div>
+          <p>
+            Homogeneous motion sources, long-tailed categories, and repetitive captions can
+            inflate in-domain performance while obscuring true cross-modal understanding.
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+          <article class="challenge-card">
+            <span class="card-number">01</span>
+            <h3>Heterogeneous motion</h3>
+            <p>Four sources probe transfer across capture conditions and generation domains.</p>
+            <div class="source-bars" aria-label="Motion source distribution">
+              <span style="--value: 43.8%"><i>MoCap</i><b>43.8%</b></span>
+              <span style="--value: 26.5%"><i>In-the-wild</i><b>26.5%</b></span>
+              <span style="--value: 22.7%"><i>Synthetic</i><b>22.7%</b></span>
+              <span style="--value: 7%"><i>Generated</i><b>7.0%</b></span>
+            </div>
+          </article>
+          <article class="challenge-card">
+            <span class="card-number">02</span>
+            <h3>Balanced semantics</h3>
+            <p>A hierarchical taxonomy covers 7 coarse, 33 middle-level, and 118 fine-grained categories.</p>
+            <div class="taxonomy-rings" aria-hidden="true">
+              <span><b>7</b></span><span><b>33</b></span><span><b>118</b></span>
+            </div>
+          </article>
+          <article class="challenge-card">
+            <span class="card-number">03</span>
+            <h3>Multi-granular language</h3>
+            <p>Every motion has visually grounded descriptions at three explicit semantic levels.</p>
+            <div class="granularity-example">
+              <span><b>Concise</b> 9.2 words</span>
+              <span><b>Standard</b> 16.5 words</span>
+              <span><b>Fine-grained</b> 43.6 words</span>
+            </div>
+          </article>
+        </div>
+
+        <figure class="paper-figure wide-figure">
+          <a href="assets/dataset_bias_figure_v2.pdf" target="_blank" rel="noopener" aria-label="Open benchmark statistics as PDF">
+            <img src="assets/dataset-bias.webp?v=2" alt="Statistical comparison of MRBench, HumanML3D, and KIT-ML" loading="lazy" />
+          </a>
+          <figcaption>
+            Category coverage, caption length, and retrieval ambiguity across benchmarks.
+            <a href="assets/dataset_bias_figure_v2.pdf" target="_blank" rel="noopener">View full-resolution PDF ↗</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Construction</span>
+            <h2>From a large motion pool to a reliable benchmark.</h2>
+          </div>
+          <p>
+            A multi-stage pipeline filters weak captions, balances semantic coverage, verifies
+            cross-modal alignment, and produces motion-grounded descriptions.
+          </p>
+        </div>
+        <div class="pipeline-steps">
+          <article><span>01</span><h3>Candidate filtering</h3><p>Remove generic, repetitive, and non-kinematic descriptions.</p></article>
+          <article><span>02</span><h3>Balanced sampling</h3><p>Use a hierarchical taxonomy to enforce diverse category coverage.</p></article>
+          <article><span>03</span><h3>Alignment verification</h3><p>Assess whether the described motion is observable and unambiguous.</p></article>
+          <article><span>04</span><h3>Text expansion</h3><p>Generate three granularities, followed by careful human validation.</p></article>
+        </div>
+        <figure class="paper-figure featured-figure">
+          <a href="assets/pipeline_v4.pdf" target="_blank" rel="noopener" aria-label="Open construction pipeline as PDF">
+            <img src="assets/pipeline.webp?v=2" alt="MRBench construction pipeline" loading="lazy" />
+          </a>
+          <figcaption>
+            The MRBench data curation and annotation pipeline.
+            <a href="assets/pipeline_v4.pdf" target="_blank" rel="noopener">View full-resolution PDF ↗</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section method-section reveal" id="method">
+        <div class="method-copy">
+          <span class="section-kicker">Granularity-Aware Retrieval</span>
+          <h2>Adapt to the query while preserving the anchor.</h2>
+          <p>
+            We freeze a standard-caption-aligned dual encoder and add lightweight,
+            granularity-specific motion extractors and text adapters. LLM-rewritten concise
+            and fine-grained captions provide pseudo-supervision for the new branches.
+          </p>
+          <ul class="check-list">
+            <li>Frozen global branch preserves standard-caption alignment</li>
+            <li>Attention-based motion extractors target each text granularity</li>
+            <li>Calibrated score fusion enables mixed-granularity ranking</li>
+          </ul>
+        </div>
+        <figure class="paper-figure method-figure">
+          <a href="assets/method_v4.pdf" target="_blank" rel="noopener" aria-label="Open method figure as PDF">
+            <img src="assets/method.webp?v=2" alt="Granularity-aware motion-text retrieval framework" loading="lazy" />
+          </a>
+          <figcaption><a href="assets/method_v4.pdf" target="_blank" rel="noopener">View full-resolution PDF ↗</a></figcaption>
+        </figure>
+      </section>
+
+      <section class="section results-section reveal">
+        <span class="section-kicker">Key Findings</span>
+        <h2>MRBench reveals what in-domain evaluation misses.</h2>
+        <div class="findings-grid">
+          <article>
+            <strong>01</strong>
+            <h3>Generalization gap</h3>
+            <p>Models strong on HumanML3D degrade consistently when evaluated across MRBench’s broader motion domains.</p>
+          </article>
+          <article>
+            <strong>02</strong>
+            <h3>Granularity sensitivity</h3>
+            <p>Concise and fine-grained queries expose distinct weaknesses hidden by standard descriptions.</p>
+          </article>
+          <article>
+            <strong>03</strong>
+            <h3>Better mixed retrieval</h3>
+            <p>Our lightweight adaptation improves mixed-granularity retrieval while retaining the standard-caption branch.</p>
+          </article>
+        </div>
+        <aside class="results-more">
+          <div>
+            <span class="section-kicker">More Results &amp; Examples</span>
+            <h3>Explore the complete evaluation.</h3>
+            <p>
+              Full cross-dataset retrieval tables, ablation studies, implementation
+              details, and additional qualitative motion-text examples are available
+              in the paper and supplementary video.
+            </p>
+          </div>
+          <div class="results-more-actions">
+            <a class="light-button light-button-primary" href="https://arxiv.org/abs/2608.07993" target="_blank" rel="noopener">
+              Read the paper
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="light-button" href="#video">
+              Watch the video
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section video-section reveal" id="video">
+        <div class="section-heading compact-heading">
+          <div>
+            <span class="section-kicker">Supplementary Video</span>
+            <h2>See MRBench in motion.</h2>
+          </div>
+          <p>
+            A visual introduction to why current retrieval benchmarks fall short, how
+            MRBench is constructed, and how our model handles descriptions at different
+            levels of detail.
+          </p>
+        </div>
+        <div class="video-shell">
+          <video controls preload="metadata" poster="assets/video-poster.jpg">
+            <source src="assets/supplementary_video.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div class="video-notes" aria-label="Topics covered in the supplementary video">
+          <article>
+            <span>Benchmark</span>
+            <h3>Diverse motion, precise language</h3>
+            <p>
+              Explore 3,390 motions from four sources, 118 fine-grained categories,
+              and 10,170 motion-verified captions at three granularities.
+            </p>
+          </article>
+          <article>
+            <span>Construction</span>
+            <h3>Reliable by design</h3>
+            <p>
+              Follow the filtering, taxonomy-guided sampling, semantic verification,
+              visually grounded rewriting, and human validation pipeline.
+            </p>
+          </article>
+          <article>
+            <span>Retrieval</span>
+            <h3>Alignment across granularities</h3>
+            <p>
+              See how lightweight granularity-specific branches improve non-standard
+              and mixed-granularity retrieval while preserving standard alignment.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section citation-section reveal" id="citation">
+        <div>
+          <span class="section-kicker">Citation</span>
+          <h2>Found MRBench useful?</h2>
+          <p>
+            Please cite our work. The paper is now available.
+          </p>
+        </div>
+        <div class="citation-box">
+          <pre><code>@misc{liu2026mrbenchcomprehensivebenchmarkhuman,
+  title         = {MRBench: A Comprehensive Benchmark for Human Motion-Text Retrieval},
+  author        = {Fulong Liu and Liang Xu and Chengqun Yang and Yuhao Zhang and Yichao Yan and Xiaokang Yang},
+  year          = {2026},
+  eprint        = {2608.07993},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2608.07993},
+}</code></pre>
+          <button class="copy-button" type="button" aria-label="Copy BibTeX">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img class="brand-logo" src="assets/logo.png" alt="" /><strong>MRBench</strong></div>
+      <p>Built for advancing robust motion-language alignment.</p>
+      <p>© 2026 MRBench authors</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
