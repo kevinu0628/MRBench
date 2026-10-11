@@ -672,6 +672,102 @@ sup {
   margin-top: 34px;
 }
 
+.dataset-section .section-heading > p a {
+  color: var(--green);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.dataset-bar {
+  margin-bottom: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+}
+
+.page-button {
+  min-height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  background: var(--dark);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.page-button:hover {
+  transform: translateY(-2px);
+  background: var(--green);
+}
+
+.dataset-facts {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.dataset-facts strong {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.dataset-card {
+  min-height: 210px;
+  padding: 22px 22px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.dataset-path {
+  display: inline-block;
+  padding: 4px 8px;
+  color: var(--green);
+  background: var(--green-light);
+  border-radius: 7px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.dataset-card h3 {
+  margin: 18px 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.dataset-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.dataset-card code {
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82em;
+}
+
 .pipeline-steps {
   position: relative;
   margin-bottom: 40px;
@@ -1104,7 +1200,8 @@ footer p {
     margin-top: 20px;
   }
 
-  .challenge-grid {
+  .challenge-grid,
+  .dataset-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1182,6 +1279,7 @@ footer p {
   }
 
   .challenge-grid,
+  .dataset-grid,
   .pipeline-steps,
   .findings-grid,
   .video-notes {

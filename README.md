@@ -3,6 +3,7 @@
 Official project page for **MRBench: A Comprehensive Benchmark for Human Motion-Text Retrieval**.
 
 - Paper: https://arxiv.org/abs/2608.07993
+- Dataset: https://huggingface.co/datasets/Kevinu0628/MRBench
 - Project page: https://kevinu0628.github.io/MRBench/
 
 ## Local preview

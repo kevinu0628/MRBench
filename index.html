@@ -25,6 +25,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
+        <a href="#dataset">Dataset</a>
         <a href="#method">Method</a>
         <a href="#video">Video</a>
         <a href="#citation">Citation</a>
@@ -71,10 +72,10 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.7-.5-2.4 3.3-.4 6.8-1.6 6.8-7.4a5.7 5.7 0 0 0-1.5-4A5.3 5.3 0 0 0 19.6.4S18.4 0 15 1.9a13.4 13.4 0 0 0-6 0C5.6 0 4.4.4 4.4.4a5.3 5.3 0 0 0-.2 3.9 5.7 5.7 0 0 0-1.5 4c0 5.8 3.5 7 6.8 7.4-.5.5-.6 1.1-.5 2.4V22"/></svg>
               Code <span class="soon">Soon</span>
             </button>
-            <button class="button button-secondary" type="button" disabled title="Coming soon">
+            <a class="button button-secondary" href="https://huggingface.co/datasets/Kevinu0628/MRBench" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg>
-              Dataset <span class="soon">Soon</span>
-            </button>
+              Dataset
+            </a>
             <a class="button button-ghost" href="#video">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>
               Video
@@ -196,6 +197,56 @@
             <a href="assets/pipeline_v4.pdf" target="_blank" rel="noopener">View full-resolution PDF ↗</a>
           </figcaption>
         </figure>
+      </section>
+
+      <section class="section dataset-section reveal" id="dataset">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Open Dataset</span>
+            <h2>Download MRBench on Hugging Face.</h2>
+          </div>
+          <p>
+            The full benchmark is released as
+            <a href="https://huggingface.co/datasets/Kevinu0628/MRBench" target="_blank" rel="noopener">Kevinu0628/MRBench</a>.
+            It contains 3,390 motion–text pairs with consecutive IDs from 0 to 3389.
+            Files that share an ID describe the same sample.
+          </p>
+        </div>
+
+        <div class="dataset-bar">
+          <a class="page-button" href="https://huggingface.co/datasets/Kevinu0628/MRBench" target="_blank" rel="noopener">
+            Open on Hugging Face
+            <span aria-hidden="true">↗</span>
+          </a>
+          <ul class="dataset-facts" aria-label="Dataset facts">
+            <li><strong>3,390</strong> samples</li>
+            <li><strong>901 MB</strong> total</li>
+            <li><strong>Apache-2.0</strong> license</li>
+          </ul>
+        </div>
+
+        <div class="dataset-grid">
+          <article class="dataset-card">
+            <span class="dataset-path">texts/{id}.json</span>
+            <h3>Text annotations</h3>
+            <p>Concise, standard, and fine-grained descriptions for every motion.</p>
+          </article>
+          <article class="dataset-card">
+            <span class="dataset-path">raw_feats/{id}.pt</span>
+            <h3>Raw features</h3>
+            <p>ViMoGen features <code>[T, 276]</code>, or global joints <code>[T, 22, 3]</code> for Hunyuan3D samples. Z-up.</p>
+          </article>
+          <article class="dataset-card">
+            <span class="dataset-path">joints/{id}.pt</span>
+            <h3>Global joints</h3>
+            <p>Y-up positions <code>[T, 22, 3]</code> in the T2M / HumanML3D 22-joint order.</p>
+          </article>
+          <article class="dataset-card">
+            <span class="dataset-path">guoh3dfeats/{id}.pt</span>
+            <h3>Guo features</h3>
+            <p>HumanML3D-style features <code>[T−1, 263]</code>, including the conventional X-axis flip.</p>
+          </article>
+        </div>
       </section>
 
       <section class="section method-section reveal" id="method">
